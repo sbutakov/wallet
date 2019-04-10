@@ -1,0 +1,34 @@
+version: "2"
+services:
+  wallet:
+    container_name: wallet
+    image: sbutakov/wallet:0.0.1
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080
+    environment:
+      POSTGRES_DSN: "host=postgres port=5432 dbname=wallet user=postgres password=pgsecret sslmode=disable"
+      POSTGRES_FILEPATH: "etc/db/schema.sql"
+      ACCOUNT_ALLOWEDCURRENCY: "usd,eur"
+      SERVICE_LISTENADDRESS: ":8080"
+    networks:
+      - wallet_net
+
+  postgres:
+    container_name: postgres-alpine
+    image: postgres:9.5-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: wallet
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pgsecret
+    networks:
+      - wallet_net
+
+networks:
+  wallet_net:
+    driver: bridge
