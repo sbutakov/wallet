@@ -2,7 +2,7 @@
 The Wallet is the challenge by Coins.ph
 
 ## Description
-The service that provides methods for create and view accounts, sends payments between accounts
+The service that provides methods for create, view and sends payments between accounts
 
 ## Commands
 - Test: `go test ./...`
