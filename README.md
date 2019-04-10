@@ -1,10 +1,10 @@
 # Wallet coins-challenge
 The Wallet is the challenge by Coins.ph
 
-##Description
+## Description
 The service that provides methods for create and view accounts, sends payments between accounts
 
-##Commands
+## Commands
 - Test: `go test ./...`
 - Lint:
 ```bash
@@ -17,7 +17,7 @@ gometalinter --vendor --line-length=100 \
         ./...
 ```
 
-##Usage
+## Usage
  - Start service: `docker-compose -f deployments/docker-compose.yml`
  - Create account:
  ```bash
