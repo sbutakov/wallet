@@ -22,7 +22,7 @@ gometalinter --vendor --line-length=100 \
 ```
 
 ## Usage
- - Start service: `docker-compose -f deployments/docker-compose.yml`
+ - Start service: `docker-compose -f deployments/docker-compose.yml up`
  - Create account:
  ```bash
 curl -X POST http://localhost:8080/accounts -d '{
