@@ -2,7 +2,7 @@ package config
 
 import (
 	"github.com/kelseyhightower/envconfig"
-	"gitlab.atuko.ru/lib/errors"
+	"github.com/pkg/errors"
 
 	"github.com/sbutakov/wallet/pkg/account"
 	"github.com/sbutakov/wallet/pkg/postgres"

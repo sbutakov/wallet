@@ -85,14 +85,6 @@
   revision = "f58768cc1a7a7e77a3bd49e98cdd21419399b6a3"
   version = "v1.2.0"
 
-[[projects]]
-  digest = "1:f97c85a3e3ffad0f794a5a6e3ea7483eba579c6ca64dc75535d5d5b9bd083e66"
-  name = "gitlab.atuko.ru/lib/errors"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "79816f3fb610a75f4363900d1ef5445ec18ae6e9"
-  version = "v0.1.0"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
@@ -107,7 +99,6 @@
     "github.com/rs/zerolog",
     "github.com/rs/zerolog/log",
     "github.com/satori/go.uuid",
-    "gitlab.atuko.ru/lib/errors",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
