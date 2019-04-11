@@ -65,6 +65,19 @@
   version = "v0.8.1"
 
 [[projects]]
+  digest = "1:e30b5c6d83a83f1369fa92f0e279ab8046e9ee7fa2d71360956e910f44072ffb"
+  name = "github.com/rs/zerolog"
+  packages = [
+    ".",
+    "internal/cbor",
+    "internal/json",
+    "log",
+  ]
+  pruneopts = "UT"
+  revision = "651d361cfeb9d0f5b9f1d14b162c66c82509ef6d"
+  version = "v1.13.0"
+
+[[projects]]
   digest = "1:274f67cb6fed9588ea2521ecdac05a6d62a8c51c074c1fccc6a49a40ba80e925"
   name = "github.com/satori/go.uuid"
   packages = ["."]
@@ -91,6 +104,8 @@
     "github.com/kelseyhightower/envconfig",
     "github.com/lib/pq",
     "github.com/pkg/errors",
+    "github.com/rs/zerolog",
+    "github.com/rs/zerolog/log",
     "github.com/satori/go.uuid",
     "gitlab.atuko.ru/lib/errors",
   ]
