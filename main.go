@@ -18,14 +18,14 @@ import (
 )
 
 var (
-	version = "unknown"
 	built   = "unknown"
+	version = "unknown"
 )
 
 func main() {
 	log.Logger = zerolog.New(os.Stderr).With().
-		Str("@version", version).
 		Str("@built", built).
+		Str("@version", version).
 		Timestamp().
 		Logger()
 
@@ -34,8 +34,7 @@ func main() {
 	zerolog.MessageFieldName = "message"
 	zerolog.LevelFieldName = "level"
 	zerolog.TimestampFieldName = "@timestamp"
-	level, _ := zerolog.ParseLevel(zerolog.ErrorLevel.String())
-	zerolog.SetGlobalLevel(level)
+	zerolog.SetGlobalLevel(zerolog.ErrorLevel)
 
 	kitlog := klog.NewLogfmtLogger(log.Logger)
 	cfg, err := config.LoadConfigFromEnv()
