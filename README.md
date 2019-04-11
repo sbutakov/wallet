@@ -5,6 +5,10 @@ The Wallet is the challenge by Coins.ph
 The service that provides methods for create, view and sends payments between accounts
 
 ## Commands
+- Build:
+```bash
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -ldflags "-s -X 'main.version=$(git rev-parse --short HEAD)' -X 'main.built=$(date -u '+%Y-%m-%dT%H:%M:%SZ')'" -o wallet
+```
 - Test: `go test ./...`
 - Lint:
 ```bash
